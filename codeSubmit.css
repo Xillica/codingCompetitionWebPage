@@ -1,0 +1,95 @@
+
+.codeSubmission {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #181818;
+    color: #fff;
+    height: 100vh;
+    padding: 0 20px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(16, 18, 56, 1) 78%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    padding: 0 20px;
+    margin: 0;
+  }
+  
+  .form-container {
+    width: 60%;
+  }
+  
+  .submission--title {
+    font-family: lovelo;
+    font-weight: 50;
+    background: linear-gradient(
+      90deg,
+      rgba(202, 169, 212, 1) 0%,
+      rgba(193, 145, 196, 1) 26%,
+      rgba(134, 157, 223, 1) 56%,
+      rgba(183, 214, 238, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .submission-form label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .submission-form input,
+  .submission-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 2px solid #333;
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  .submission-form textarea {
+    height: auto;
+    resize: vertical;
+  }
+  
+  .submit-button {
+    background: rgba(82, 53, 53, 0);
+    border: 15px solid
+      linear-gradient(
+        90deg,
+        rgba(202, 169, 212, 1) 0%,
+        rgba(193, 145, 196, 1) 26%,
+        rgba(134, 157, 223, 1) 56%,
+        rgba(183, 214, 238, 1) 100%
+      );
+    color: #f3f3f3;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 1s ease;
+  }
+  
+  .submit-button:hover {
+    background: linear-gradient(
+      90deg,
+      rgba(183, 214, 238, 0.3) 0%,
+      rgba(134, 157, 223, 0.3) 26%,
+      rgba(193, 145, 196, 0.3) 56%,
+      rgba(202, 169, 212, 0.3) 100%
+    );
+    transition: all 1s ease;
+  }
+  
