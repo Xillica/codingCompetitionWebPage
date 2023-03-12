@@ -264,7 +264,7 @@ nav .burger div {
   align-items: center;
   background-color: #181818;
   color: #fff;
-  height: 100vh;
+  height: 90vh;
   padding: 0 20px;
   background: rgb(0, 0, 0);  margin-top: 60px;
   margin-bottom: 60px;
@@ -307,8 +307,8 @@ padding-top: 50px;
   float: left;
   margin-left: 50px;
   width: 55%;
-  font-size: 1.5rem;
-  margin-bottom: 30px;
+  font-size: 1.3rem;
+  margin-top: 50px;
   line-height: 1.5;
 
 }
@@ -460,6 +460,8 @@ button.register-button:hover {
   margin: 0;
 }
 
+
+
 .prizes-section {
   background: rgb(0, 0, 0);
   background: linear-gradient(
@@ -489,48 +491,6 @@ button.register-button:hover {
   text-align: center;
   margin-bottom: 60px;
   font-size: 4rem;
-}
-
-.prizes-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-size: 1.5rem;
-  line-height: 1.5;
-}
-
-.prize-item {
-  display: flex;
-  margin-bottom: 20px;
-  margin-left: 100px;
-  font-size: 1.5rem;
-  line-height: 1.5;
-}
-
-.prize-name {
-  font-weight: bold;
-  color: #f3f3f3;
-  font-size: 1.5rem;
-  line-height: 1.5;
-}
-
-.prize-amount {
-  font-weight: bold;
-  color: #009688;
-}
-.prize-amount::before {
-  content: "\00a0\00a0\00a0\00a0";
-}
-
-.prize-description {
-  font-size: 14px;
-  color: #999999;
-  font-size: 1.5rem;
-  line-height: 1.5;
-}
-
-.prize-description::before {
-  content: "\00a0\00a0\00a0\00a0";
 }
 
 
@@ -573,7 +533,7 @@ button.register-button:hover {
 
 .rules-list {
   margin-top: 20px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.5;
 }
 
@@ -647,4 +607,42 @@ button.contact-button {
 
 button.contact-button:hover {
   background-color: #cc0000;
+}
+
+
+
+.image-gallery {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+.slider {
+  display: flex;
+}
+.slider img {
+  width: 100%;
+  height: auto;
+}
+.controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.prev-btn,
+.next-btn {
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  color: #333;
+}
+.prev-btn:hover,
+.next-btn:hover {
+  color: #000;
 }

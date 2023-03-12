@@ -92,3 +92,34 @@ document.querySelector("#logSubButton").addEventListener("click", (e)=>{
     }
 
 })
+
+
+const slider = document.querySelector(".slider");
+
+function slide() {
+  const firstImage = slider.firstElementChild;
+  const imageWidth = firstImage.clientWidth;
+  slider.appendChild(firstImage);
+  slider.style.transition = `transform 20s linear`;
+  slider.style.transform = `translateX(-${imageWidth}px)`;
+  setTimeout(() => {
+    slider.style.transition = `none`;
+    slider.style.transform = `translateX(0)`;
+    slide();
+  }, 5000);
+}
+
+function resize() {
+  const images = slider.querySelectorAll("img");
+  let totalWidth = 0;
+  images.forEach((image) => {
+    totalWidth += image.clientWidth;
+  });
+  slider.style.width = `${totalWidth}px`;
+}
+
+resize();
+slide();
+window.addEventListener("resize", resize);
+
+

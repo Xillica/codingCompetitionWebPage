@@ -4,8 +4,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>BYTEBATTLE</title>
     <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
     <nav>
       <div class="logo">
         <a href="#">BYTEBATTLE</a>
@@ -16,7 +27,7 @@
         <li><a href="#prices">Prices</a></li>
         <li><a href="#contactUs">Contact Us</a></li>
       </ul>
-      
+
       <div class="burger">
         <div class="line1"></div>
         <div class="line2"></div>
@@ -32,17 +43,17 @@
           win great prizes.
         </p>
         <div id="buttonDivId" class="hero-buttons-div">
-        <button class="hero-button" id="loginButton">Login</button>
-      
-        <button class="hero-button" id="registerButton">Register Now</button>
-      </div>
+          <button class="hero-button" id="loginButton">Login</button>
+
+          <button class="hero-button" id="registerButton">Register Now</button>
+        </div>
       </div>
       <img src="homePic.png" alt="home_pic" class="homePic" />
     </section>
 
     <section class="registration-section">
       <div class="registration-title">Register Now</div>
-      <form  >
+      <form>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required />
 
@@ -59,9 +70,9 @@
       </form>
     </section>
 
-    <section class="login-section " >
-      <div class="registration-title">Login Now </div>
-      <form >
+    <section class="login-section">
+      <div class="registration-title">Login Now</div>
+      <form>
         <label for="email">Email:</label>
         <input type="email" id="emailLogin" name="email" required />
 
@@ -121,58 +132,66 @@
     <section class="aboutUs-section">
       <div class="aboutUs-title">About Us</div>
       <div class="aboutUs-content">
-        <div class="aboutUs-text"> 
+        <div class="aboutUs-text">
           <p>
-          Welcome to our coding competition website! We are excited to provide a platform for programmers and coders to showcase their skills and compete against each other. Our team is dedicated to creating a challenging and rewarding experience for all participants.
-
-Our mission is to provide a platform that encourages growth, learning, and innovation. We believe that coding competitions can inspire creativity and help programmers improve their skills. We are committed to creating a fair and competitive environment where everyone has an opportunity to succeed.
-</p>
-<br>
-<p>
-
-We take pride in our work and believe in providing value to our participants. Our goal is to help coders and programmers develop their skills and achieve their goals. We believe that by working together, we can make the world a better place through technology.
-
-Thank you for visiting our website. We look forward to hosting the competition and seeing the amazing things that our participants will create. If you have any questions or would like more information about the competition, please do not hesitate to contact us.
-</p>   
-</div>
+            Welcome to our coding competition website! We are excited to provide
+            a platform for programmers and coders to showcase their skills and
+            compete against each other. Our team is dedicated to creating a
+            challenging and rewarding experience for all participants. Our
+            mission is to provide a platform that encourages growth, learning,
+            and innovation. We believe that coding competitions can inspire
+            creativity and help programmers improve their skills. We are
+            committed to creating a fair and competitive environment where
+            everyone has an opportunity to succeed.
+          </p>
+        </div>
         <div class="aboutUs-img">
-          <img src="com1.png" alt="">
+          <img src="com1.png" alt="" />
         </div>
       </div>
     </section>
 
-
-
-
+    <div class="image-gallery">
+      <div class="slider">
+        <img src="image1.webp" alt="Image 1" width="100%"/>
+        <img src="image2.jpeg" alt="Image 2" width="100%"/>
+        <img src="image3.jpeg" alt="Image 3" width="100%"/>
+        <img src="image4.jpeg" alt="Image 4" width="100%"/>
+      </div>
+      <div class="controls">
+        <button class="prev-btn">&#10094;</button>
+        <button class="next-btn">&#10095;</button>
+      </div>
+    </div>
 
     <section id="prices" class="prizes-section">
       <div class="prizes-title">Prizes</div>
-      <ul class="prizes-list" style="list-style: none">
-        <li class="prize-item">
-          <span class="prize-name">First Prize      :</span>
-          <span class="prize-amount">$500</span>
-          <span class="prize-description"
-            >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec
-            nisi non magna porta commodo.</span
-          >
-        </li>
-        <li class="prize-item">
-          <span class="prize-name">Second Prize :</span>
-          <span class="prize-amount">$250</span>
-          <span class="prize-description"
-            >Praesent sit amet eros mollis, malesuada turpis et, tristique
-            libero. Suspendisse a massa turpis.</span
-          >
-        </li>
-        <li class="prize-item">
-          <span class="prize-name">Third Prize     :</span>
-          <span class="prize-amount">$100</span>
-          <span class="prize-description"
-            >Fusce et velit scelerisque, aliquet augue sit amet, euismod ipsum.
-            Nullam in mauris purus.</span
-          >
-        </li>
-      </ul>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card mb-3" style="background-color: rgb(255, 251, 0)">
+            <div class="card-body">
+              <h5 class="card-title">First Place</h5>
+              <p class="card-text">$500 Prize</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card mb-3" style="background-color: silver">
+            <div class="card-body">
+              <h5 class="card-title">Second Place</h5>
+              <p class="card-text">$250 Prize</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card mb-3" style="background-color: #e48f3b">
+            <div class="card-body">
+              <h5 class="card-title">Third Place</h5>
+              <p class="card-text">$100 Prize</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="rules" class="rules-section">
@@ -209,16 +228,16 @@ Thank you for visiting our website. We look forward to hosting the competition a
       <form>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required />
-    
+
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required />
-    
+
         <label for="subject">Subject:</label>
         <input type="text" id="subject" name="subject" required />
-    
+
         <label for="message">Message:</label>
         <textarea id="message" name="message" rows="5" required></textarea>
-    
+
         <button type="submit" class="contact-button">Send Message</button>
       </form>
     </section>
@@ -228,9 +247,6 @@ Thank you for visiting our website. We look forward to hosting the competition a
     </div>
     <div class="devider"></div>
 
-
     <script src="app.js"></script>
   </body>
 </html>
-
-
