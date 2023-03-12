@@ -11,13 +11,12 @@
         <a href="#">BYTEBATTLE</a>
       </div>
       <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Rules</a></li>
-        <li><a href="#">Challenge</a></li>
-        <li><a href="#">Submission</a></li>
-        <li><a href="#">Leaderboard</a></li>
-        <li><a href="#">FAQ</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#rules">Rules</a></li>
+        <li><a href="#prices">Prices</a></li>
+        <li><a href="#contactUs">Contact Us</a></li>
       </ul>
+      
       <div class="burger">
         <div class="line1"></div>
         <div class="line2"></div>
@@ -32,9 +31,45 @@
           Compete with other developers from around the world for the chance to
           win great prizes.
         </p>
-        <button class="hero-button">Register Now</button>
+        <div id="buttonDivId" class="hero-buttons-div">
+        <button class="hero-button" id="loginButton">Login</button>
+      
+        <button class="hero-button" id="registerButton">Register Now</button>
+      </div>
       </div>
       <img src="homePic.png" alt="home_pic" class="homePic" />
+    </section>
+
+    <section class="registration-section">
+      <div class="registration-title">Register Now</div>
+      <form  >
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <button id="regSubButton" class="register-button">Register</button>
+      </form>
+    </section>
+
+    <section class="login-section " >
+      <div class="registration-title">Login Now </div>
+      <form >
+        <label for="email">Email:</label>
+        <input type="email" id="emailLogin" name="email" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="passwordLogin" name="password" required />
+
+        <button id="logSubButton" class="register-button">Login</button>
+      </form>
     </section>
 
     <section class="sponsor">
@@ -83,55 +118,34 @@
       </table>
     </section>
 
-    <section class="rules-section">
-      <div class="rules-title">Competition Rules</div>
-      <ul class="rules-bulk">
-        <li class="rules-list">
-          Participants must register before the competition deadline.
-        </li>
-        <li class="rules-list">
-          All code submitted must be original work created by the participant.
-        </li>
-        <li class="rules-list">
-          Participants may use any programming language or tools they prefer.
-        </li>
-        <li class="rules-list">
-          Code will be judged based on functionality, efficiency, and
-          readability.
-        </li>
-        <li class="rules-list">
-          Participants may work individually or in teams of up to four people.
-        </li>
-        <li class="rules-list">
-          Plagiarism will result in immediate disqualification.
-        </li>
-        <li class="rules-list">
-          Winners will be announced within 24 hours of the competition deadline.
-        </li>
-      </ul>
-    </section>
-    <div class="devider"></div>
+    <section class="aboutUs-section">
+      <div class="aboutUs-title">About Us</div>
+      <div class="aboutUs-content">
+        <div class="aboutUs-text"> 
+          <p>
+          Welcome to our coding competition website! We are excited to provide a platform for programmers and coders to showcase their skills and compete against each other. Our team is dedicated to creating a challenging and rewarding experience for all participants.
 
-    <section class="registration-section">
-      <div class="registration-title">Register Now</div>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+Our mission is to provide a platform that encourages growth, learning, and innovation. We believe that coding competitions can inspire creativity and help programmers improve their skills. We are committed to creating a fair and competitive environment where everyone has an opportunity to succeed.
+</p>
+<br>
+<p>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+We take pride in our work and believe in providing value to our participants. Our goal is to help coders and programmers develop their skills and achieve their goals. We believe that by working together, we can make the world a better place through technology.
 
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required />
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required />
-
-        <button type="submit" class="register-button">Register</button>
-      </form>
+Thank you for visiting our website. We look forward to hosting the competition and seeing the amazing things that our participants will create. If you have any questions or would like more information about the competition, please do not hesitate to contact us.
+</p>   
+</div>
+        <div class="aboutUs-img">
+          <img src="com1.png" alt="">
+        </div>
+      </div>
     </section>
 
-    <section class="prizes-section">
+
+
+
+
+    <section id="prices" class="prizes-section">
       <div class="prizes-title">Prizes</div>
       <ul class="prizes-list" style="list-style: none">
         <li class="prize-item">
@@ -161,10 +175,62 @@
       </ul>
     </section>
 
+    <section id="rules" class="rules-section">
+      <div class="rules-title">Competition Rules</div>
+      <ul class="rules-bulk">
+        <li class="rules-list">
+          Participants must register before the competition deadline.
+        </li>
+        <li class="rules-list">
+          All code submitted must be original work created by the participant.
+        </li>
+        <li class="rules-list">
+          Participants may use any programming language or tools they prefer.
+        </li>
+        <li class="rules-list">
+          Code will be judged based on functionality, efficiency, and
+          readability.
+        </li>
+        <li class="rules-list">
+          Participants may work individually or in teams of up to four people.
+        </li>
+        <li class="rules-list">
+          Plagiarism will result in immediate disqualification.
+        </li>
+        <li class="rules-list">
+          Winners will be announced within 24 hours of the competition deadline.
+        </li>
+      </ul>
+    </section>
+    <div class="devider"></div>
+
+    <section id="contactUs" class="contact-section">
+      <div class="contact-title">Contact Us</div>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+    
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required />
+    
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+    
+        <button type="submit" class="contact-button">Send Message</button>
+      </form>
+    </section>
+
     <div class="footer">
       <p>&copy; 2023 Coding Competition. All rights reserved.</p>
     </div>
+    <div class="devider"></div>
+
 
     <script src="app.js"></script>
   </body>
 </html>
+
+
