@@ -1,98 +1,108 @@
-document.querySelector("#registerButton").addEventListener("click", function(){
-
+document
+  .querySelector("#registerButton")
+  .addEventListener("click", function () {
     document.querySelector(".registration-section").classList.add("active");
     document.querySelector(".homePage").classList.add("blur");
     return true;
-})
+  });
 
 let users = [];
 
-document.querySelector("#regSubButton").addEventListener("click", (e)=>{
-        
-    e.preventDefault();
+document.querySelector("#regSubButton").addEventListener("click", (e) => {
+  e.preventDefault();
 
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let username = document.getElementById("username").value.trim();
+  let password = document.getElementById("password").value.trim();
 
-    let user = {
-        name: name,
-        email: email,
-        username: username,
-        password: password
-    }
+  // validate inputs
+  if (!name || !email || !username || !password) {
+    alert("Please fill in all fields");
+    return;
+  }
 
-    if (localStorage.getItem('users')) {
-        users = localStorage.getItem('users')
-        users = JSON.parse(users)
-        users.push(user)
-        localStorage.setItem('users', JSON.stringify(users))
-        displayUsers(users)
-    }
-    else {
-        users.push(user)
-        localStorage.setItem('users', JSON.stringify(users))
-        displayUsers(users)
-    }
+  // validate email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert("Please enter a valid email address");
+    return;
+  }
 
+  // validate password length
+  if (password.length < 6) {
+    alert("Password must be at least 6 characters long");
+    return;
+  }
 
-    function displayUsers(users){
-        users.forEach(user => {
-            console.log(`${user.username} and ${user.password}`);
-        });
-    }
+  let user = {
+    name: name,
+    email: email,
+    username: username,
+    password: password,
+  };
 
+  let users = [];
 
-    document.querySelector(".registration-section").classList.remove("active");
+  if (localStorage.getItem("users")) {
+    users = localStorage.getItem("users");
+    users = JSON.parse(users);
+    users.push(user);
+    localStorage.setItem("users", JSON.stringify(users));
+    displayUsers(users);
+  } else {
+    users.push(user);
+    localStorage.setItem("users", JSON.stringify(users));
+    displayUsers(users);
+  }
+
+  function displayUsers(users) {
+    users.forEach((user) => {
+      console.log(`${user.username} and ${user.password}`);
+    });
+  }
+
+  document.querySelector(".registration-section").classList.remove("active");
+  document.querySelector(".homePage").classList.remove("blur");
+
+  alert("Registration Successful!");
+});
+
+document.querySelector("#loginButton").addEventListener("click", function () {
+  document.querySelector(".login-section").classList.add("active");
+  document.querySelector(".homePage").classList.add("blur");
+  return true;
+});
+
+document.querySelector("#logSubButton").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  let email = document.getElementById("emailLogin").value;
+  let password = document.getElementById("passwordLogin").value;
+  let isSuccess = false;
+
+  if (localStorage.getItem("users")) {
+    let users = localStorage.getItem("users");
+    users = JSON.parse(users);
+
+    users.forEach((user) => {
+      if (user.email === email && user.password === password) {
+        isSuccess = true;
+      }
+    });
+  }
+  if (isSuccess) {
+    alert("Login Succesinsful!");
+    document.querySelector(".login-section").classList.remove("active");
     document.querySelector(".homePage").classList.remove("blur");
-
-    alert("Registration Successful!");
-
-})
-
-document.querySelector("#loginButton").addEventListener("click", function(){
-
-    document.querySelector(".login-section").classList.add("active");
-    document.querySelector(".homePage").classList.add("blur");
-    return true;
-})
-
-document.querySelector("#logSubButton").addEventListener("click", (e)=>{
-        
-    e.preventDefault();
-
-    let email = document.getElementById("emailLogin").value;
-    let password = document.getElementById("passwordLogin").value;
-    let isSuccess= false;
-
-    if (localStorage.getItem('users')) {
-        let users = localStorage.getItem('users')
-        users = JSON.parse(users)
-
-        users.forEach(user => {
-            if (user.email === email && user.password === password) {
-                isSuccess = true;
-            }
-        });
-    
-    }
-    if (isSuccess) {
-        alert("Login Succesinsful!");
-        document.querySelector(".login-section").classList.remove("active");
-        document.querySelector(".homePage").classList.remove("blur");
-        // Replace the current page with a new page
-        window.location.replace("challenge.html");
-
-
-    }else {
-        alert("Login Failed! Enter Again!");
-        document.querySelector(".login-section").classList.remove("active");
-        document.querySelector(".homePage").classList.remove("blur");
-    }
-
-})
-
+    // Replace the current page with a new page
+    window.location.replace("challenge.html");
+  } else {
+    alert("Login Failed! Enter Again!");
+    document.querySelector(".login-section").classList.remove("active");
+    document.querySelector(".homePage").classList.remove("blur");
+  }
+});
 
 const slider = document.querySelector(".slider");
 
@@ -121,5 +131,3 @@ function resize() {
 resize();
 slide();
 window.addEventListener("resize", resize);
-
-
